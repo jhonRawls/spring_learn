@@ -19,9 +19,18 @@ public class App {
 		
 //		ApplicationContext context=new FileSystemXmlApplicationContext("E:/JavaCode/spring_learn/src/main/java/Beans.xml");
 //		HelloWorld obj=(HelloWorld)context.getBean("helloWorld");
-		obj.getMessage();
+//		obj.getMessage();
 		context.registerShutdownHook();
 		
+		Parent parent=(Parent)context.getBean("parentBean");
+		
+		parent.getMessage1();
+		parent.getMessage2();
+		
+		Child child=(Child)context.getBean("childBean");
+		child.getMessage1();
+		child.getMessage2();
+		child.getMessage3();
 
 		
 		

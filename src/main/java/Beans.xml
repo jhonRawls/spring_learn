@@ -3,10 +3,23 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
-	<bean id="helloWorld" class="cn.ibadi.springtest.HelloWorld"  init-method="init" destroy-method="destory">
-	<property name="message" value="hello world"></property>
+
+	<bean id="helloWorld" class="cn.ibadi.springtest.HelloWorld"
+		init-method="init" destroy-method="destory">
+		<property name="message" value="hello world"></property>
 	</bean>
-	<bean id="exampleBean" class="cn.ibadi.springtest.ExampleBean" >
+
+	<bean id="exampleBean" class="cn.ibadi.springtest.ExampleBean">
+	</bean>
+
+	<bean id="parentBean" class="cn.ibadi.springtest.Parent">
+		<property name="message1" value="hello world"></property>
+		<property name="message2" value="hello second world"></property>
+	</bean>
+	
+	<bean id="childBean" class="cn.ibadi.springtest.Child" parent="parentBean">
+		<property name="message1" value="hello india"></property>
+		<property name="message3" value="hello india world"></property>
 	</bean>
 
 </beans>
