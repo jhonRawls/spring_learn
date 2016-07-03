@@ -25,6 +25,7 @@
 		<property name="message3" value="hello india world"></property>
 	</bean>
 
+
 <aop:config>
 	<aop:aspect id="log" ref="logging">
 		<aop:pointcut expression="execution(* cn.ibadi.springtest.*.*(..))"  id="selectAll"/>
@@ -41,5 +42,14 @@
 </bean>
 
 <bean id="logging"  class="cn.ibadi.springtest.Logging"></bean>
+
+	
+	<bean id="textEditor" class="cn.ibadi.springdi.TextEditor">
+		<constructor-arg ref="spellChecker"/>
+		</bean>
+	
+	<bean id="spellChecker" class="cn.ibadi.springdi.SpellChecker">
+		</bean>	
+		
 
 </beans>
