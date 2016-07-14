@@ -44,12 +44,7 @@
 <bean id="logging"  class="cn.ibadi.springtest.Logging"></bean>
 
 	
-	<bean id="textEditor" class="cn.ibadi.springdi.TextEditor">
-		<constructor-arg ref="spellChecker"/>
-		</bean>
 	
-	<bean id="spellChecker" class="cn.ibadi.springdi.SpellChecker">
-		</bean>	
 		
 
 </beans>

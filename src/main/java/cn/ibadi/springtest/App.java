@@ -4,7 +4,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import cn.ibadi.springdi.TextEditor;
 
 /**
  * Hello world!
@@ -37,8 +36,6 @@ public class App {
 
 		
 		ApplicationContext context=new ClassPathXmlApplicationContext("Beans.xml");
-		TextEditor te=(TextEditor)context.getBean("textEditor");
-		te.spellCheck();
 		
 		
 	}
