@@ -9,9 +9,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class App {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
-        TextEditor textEditor=(TextEditor)context.getBean("textEditor");
+        TextEditor textEditor = (TextEditor) context.getBean("textEditor");
         textEditor.spellCheck();
-
     }
 
 

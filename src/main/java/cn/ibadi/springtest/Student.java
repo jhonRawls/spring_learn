@@ -1,30 +1,28 @@
 package cn.ibadi.springtest;
 
+import org.springframework.beans.factory.annotation.Required;
+
 public class Student {
-private int age;
-	private String name;
+    public int getAge() {
+        return age;
+    }
 
-	public int getAge() {
-		System.out.println("Age "+age);
-		return age;
-	}
+    @Required
+    public void setAge(int age) {
+        this.age = age;
+    }
 
-	public void setAge(int age) {
-		this.age = age;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public String getName() {
-		System.out.println("name "+name);
-		return name;
-	}
+    @Required
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
- public void printThrowException(){
-	 System.out.println("exception raised");
-	 throw new IllegalArgumentException();
- }
+    private int age;
+    private String name;
 }
 
 
