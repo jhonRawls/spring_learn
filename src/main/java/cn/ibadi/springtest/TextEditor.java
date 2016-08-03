@@ -7,11 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
  */
 public class TextEditor {
 
-    public  TextEditor(){
+    @Autowired
+    public  TextEditor(SpellChecker spellChecker){
         System.out.println("Inside TextEditor constructor");
+        this.spellChecker=spellChecker;
     }
 
-    @Autowired
     private SpellChecker spellChecker;
 
     public void spellCheck() {

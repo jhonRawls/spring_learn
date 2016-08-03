@@ -1,13 +1,11 @@
 package cn.ibadi.springtest;
 
-import org.springframework.beans.factory.annotation.Required;
-
 public class Student {
     public int getAge() {
         return age;
     }
 
-    @Required
+
     public void setAge(int age) {
         this.age = age;
     }
@@ -16,7 +14,7 @@ public class Student {
         return name;
     }
 
-    @Required
+
     public void setName(String name) {
         this.name = name;
     }

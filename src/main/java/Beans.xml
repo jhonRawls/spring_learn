@@ -32,7 +32,14 @@
     <bean id="spellChecker" class="cn.ibadi.springtest.SpellChecker"/>
 
     <bean id="student" class="cn.ibadi.springtest.Student">
-        <property name="name" value="jhon"/>
+        <property name="name" value="student-jhon"/>
         <property name="age" value="12"/>
+    </bean>
+
+    <bean id="profile" class="cn.ibadi.springtest.Profile"/>
+
+    <bean id="student2" class="cn.ibadi.springtest.Student">
+        <property name="name" value="student-test2"/>
+        <property name="age" value="124"/>
     </bean>
 </beans>
